@@ -48,9 +48,7 @@ VS Code
 
 Install required Python packages:
 
-```bash
 python -m pip install opencv-python mediapipe numpy pyserial
-```
 
 ## Project Files
 
@@ -67,9 +65,7 @@ arduino/ — Arduino LCD sketch
 
 Run:
 
-```bash
 python collect_data.py
-```
 
 Make an ASL handshape.  
 Press the corresponding keyboard letter once.  
@@ -85,11 +81,9 @@ Upload the Arduino LCD sketch.
 
 Close Arduino Serial Monitor.
 
-Then run:
+Run:
 
-```bash
 python recognize_asl.py
-```
 
 The recognized letter appears in the camera window and on the Arduino LCD.
 
@@ -97,9 +91,7 @@ The recognized letter appears in the camera window and on the Arduino LCD.
 
 Arduino LCD configuration:
 
-```cpp
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
-```
 
 | LCD Pin | Connection |
 |---|---|
