@@ -54,16 +54,16 @@ python -m pip install opencv-python mediapipe numpy pyserial
 
 ## Project Files
 
-```text
-camera_test.py
-hand_tracking.py
-collect_data.py
-recognize_asl.py
-asl_landmarks.csv
-hand_landmarker.task
-requirements.txt
-arduino/
-```
+## Project Files
+
+- `camera_test.py` — tests webcam access
+- `hand_tracking.py` — MediaPipe hand tracking prototype
+- `collect_data.py` — collects labeled ASL landmark samples
+- `recognize_asl.py` — runs live ASL recognition and sends output to Arduino
+- `asl_landmarks.csv` — collected training data
+- `hand_landmarker.task` — MediaPipe hand landmark model
+- `requirements.txt` — Python dependencies
+- `arduino/` — Arduino LCD sketch
 
 ## Data Collection
 
