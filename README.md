@@ -14,12 +14,12 @@ https://github.com/user-attachments/assets/ffb670f5-8b3b-4139-9f4e-ad132a210fb3
 
 ## Current Support
 
-- 24 static ASL letters
-- Real-time hand tracking
-- Custom training dataset
-- KNN-based classification
-- Temporal smoothing
-- Arduino LCD output
+24 static ASL letters  
+Real-time hand tracking  
+Custom training dataset  
+KNN-based classification  
+Temporal smoothing  
+Arduino LCD output
 
 J and Z are not yet supported because they require motion tracking across multiple frames.
 
@@ -27,24 +27,24 @@ J and Z are not yet supported because they require motion tracking across multip
 
 ### Required
 
-- Arduino board
-- USB cable
-- 16x2 LCD
-- Jumper wires
-- Resistor for LCD backlight
-- Laptop with camera
+Arduino board  
+USB cable  
+16x2 LCD  
+Jumper wires  
+Resistor for LCD backlight  
+Laptop with camera
 
 ### Optional
 
-- Breadboard
-- External webcam
-- Potentiometer for LCD contrast
+Breadboard  
+External webcam  
+Potentiometer for LCD contrast
 
 ## Software
 
-- Python 3
-- Arduino IDE
-- VS Code
+Python 3  
+Arduino IDE  
+VS Code
 
 Install required Python packages:
 
@@ -52,17 +52,16 @@ Install required Python packages:
 python -m pip install opencv-python mediapipe numpy pyserial
 ```
 
-
 ## Project Files
 
-- `camera_test.py` — tests webcam access
-- `hand_tracking.py` — MediaPipe hand tracking prototype
-- `collect_data.py` — collects labeled ASL landmark samples
-- `recognize_asl.py` — runs live ASL recognition and sends output to Arduino
-- `asl_landmarks.csv` — collected training data
-- `hand_landmarker.task` — MediaPipe hand landmark model
-- `requirements.txt` — Python dependencies
-- `arduino/` — Arduino LCD sketch
+camera_test.py — tests webcam access  
+hand_tracking.py — MediaPipe hand tracking prototype  
+collect_data.py — collects labeled ASL landmark samples  
+recognize_asl.py — runs live ASL recognition and sends output to Arduino  
+asl_landmarks.csv — collected training data  
+hand_landmarker.task — MediaPipe hand landmark model  
+requirements.txt — Python dependencies  
+arduino/ — Arduino LCD sketch
 
 ## Data Collection
 
@@ -72,11 +71,11 @@ Run:
 python collect_data.py
 ```
 
-1. Make an ASL handshape.
-2. Press the corresponding keyboard letter once.
-3. Slowly vary hand angle and distance.
-4. The program records 50 samples automatically.
-5. Repeat for each static letter.
+Make an ASL handshape.  
+Press the corresponding keyboard letter once.  
+Slowly vary the hand angle and distance.  
+The program records 50 samples automatically.  
+Repeat for each static letter.
 
 J and Z are skipped.
 
@@ -131,13 +130,13 @@ A prediction is accepted when the same letter appears in at least 6 of the previ
 
 ## Limitations
 
-- J and Z require motion recognition
-- Training data is currently based primarily on one user's hand
-- Extreme camera angles can reduce accuracy
+J and Z require motion recognition  
+Training data is currently based primarily on one user's hand  
+Extreme camera angles can reduce accuracy
 
 ## Future Improvements
 
-- J and Z motion recognition
-- Word construction
-- Multi-user training data
-- Confidence thresholding
+J and Z motion recognition  
+Word construction  
+Multi-user training data  
+Confidence thresholding
