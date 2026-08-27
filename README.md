@@ -52,7 +52,6 @@ Install required Python packages:
 python -m pip install opencv-python mediapipe numpy pyserial
 ```
 
-## Project Files
 
 ## Project Files
 
